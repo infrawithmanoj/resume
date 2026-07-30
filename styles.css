@@ -14,7 +14,7 @@ body {
   padding: 0 20px;
 }
 
-/* === Hero (reduced height, with clouds) === */
+/* === Hero (reduced, with cloud images) === */
 .hero {
   position: relative;
   padding: 50px 20px;
@@ -28,12 +28,22 @@ body {
 
 .cloud {
   position: absolute;
-  opacity: 0.7;
+  opacity: 0.6;
   animation: float 6s ease-in-out infinite;
 }
 
-.cloud-1 { top: 10%; left: 8%; width: 160px; height: 80px; }
-.cloud-2 { top: 15%; right: 10%; width: 120px; height: 60px; animation-delay: 2s; }
+.cloud-1 {
+  top: 10%;
+  left: 5%;
+  width: 180px;
+}
+
+.cloud-2 {
+  top: 20%;
+  right: 8%;
+  width: 140px;
+  animation-delay: 2s;
+}
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -60,7 +70,7 @@ body {
   color: #e0f7fa;
 }
 
-/* === About (centered intro) === */
+/* === About (centered) === */
 .about {
   padding: 50px 20px;
   background: #ffffff;
@@ -93,83 +103,81 @@ body {
   line-height: 1.7;
 }
 
-/* === Experience - Horizontal Timeline === */
+/* === Experience - Horizontal Milestones === */
 .experience {
-  padding: 50px 20px;
-  background: #f0f9f9;
+  padding: 40px 20px 60px;
+  background: #ffffff;
 }
 
-.h-timeline {
+.milestone-track {
   position: relative;
-  max-width: 850px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 800px;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
-.h-timeline-line {
+.milestone-line {
   position: absolute;
-  top: 48px;
-  left: 10%;
-  right: 10%;
+  top: 26px;
+  left: 50px;
+  right: 50px;
   height: 3px;
-  background: linear-gradient(to right, #0d9488, #66bfbf);
+  background: linear-gradient(to right, #66bfbf, #0d9488);
   border-radius: 2px;
 }
 
-.h-timeline-items {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
-.h-timeline-item {
+.milestone-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
   position: relative;
+  z-index: 1;
+  flex: 1;
 }
 
-.h-dot {
+.milestone-dot {
   width: 16px;
   height: 16px;
-  background: #0d9488;
+  background: #66bfbf;
   border-radius: 50%;
   border: 3px solid #ffffff;
-  box-shadow: 0 0 0 3px #0d9488;
-  margin-bottom: 14px;
-  z-index: 1;
+  box-shadow: 0 0 0 2px #66bfbf;
+  margin-bottom: 12px;
 }
 
-.h-card {
+.milestone-dot.active-dot {
+  background: #0d9488;
+  box-shadow: 0 0 0 3px #0d9488, 0 0 10px rgba(13,148,136,0.4);
+  width: 18px;
+  height: 18px;
+}
+
+.milestone-label {
   text-align: center;
-  padding: 16px 12px;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  width: 100%;
-  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.h-date {
+.milestone-label strong {
+  font-size: 0.9rem;
+  color: #2d3748;
+}
+
+.milestone-label span {
+  font-size: 0.78rem;
+  color: #4a5568;
+  font-style: italic;
+}
+
+.milestone-date {
   font-size: 0.72rem;
   color: #0d9488;
   font-weight: 600;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.h-card h4 {
-  font-size: 0.92rem;
-  color: #2d3748;
-  font-weight: 700;
-  margin-bottom: 2px;
-}
-
-.h-role {
-  font-size: 0.8rem;
-  color: #4a5568;
-  font-style: italic;
+  font-style: normal !important;
 }
 
 /* === Section Title === */
@@ -194,7 +202,7 @@ body {
 /* === Skills === */
 .skills {
   padding: 50px 20px;
-  background: #ffffff;
+  background: #f0f9f9;
 }
 
 .skills-grid {
@@ -210,7 +218,7 @@ body {
   align-items: center;
   gap: 10px;
   padding: 14px 18px;
-  background: #f7fffe;
+  background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.04);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -237,7 +245,7 @@ body {
 /* === Certifications === */
 .certifications {
   padding: 50px 20px;
-  background: #f0f9f9;
+  background: #ffffff;
 }
 
 .cert-grid {
@@ -253,7 +261,7 @@ body {
   align-items: center;
   gap: 14px;
   padding: 18px;
-  background: #ffffff;
+  background: #f7fffe;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.04);
   transition: transform 0.2s;
@@ -284,7 +292,7 @@ body {
 /* === Achievements === */
 .achievements {
   padding: 50px 20px;
-  background: #ffffff;
+  background: #f0f9f9;
 }
 
 .achievements-grid {
@@ -300,7 +308,7 @@ body {
   align-items: flex-start;
   gap: 12px;
   padding: 18px;
-  background: #f7fffe;
+  background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.04);
   transition: transform 0.2s;
@@ -324,7 +332,7 @@ body {
 /* === Hobbies === */
 .hobbies {
   padding: 50px 20px;
-  background: #f0f9f9;
+  background: #ffffff;
 }
 
 .hobbies-grid {
@@ -341,7 +349,7 @@ body {
   align-items: center;
   gap: 8px;
   padding: 20px 10px;
-  background: #ffffff;
+  background: #f7fffe;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.04);
   transition: transform 0.2s;
@@ -433,20 +441,16 @@ body {
 @media (max-width: 768px) {
   .hero-content h1 { font-size: 2.2rem; }
   .hero-content h2 { font-size: 1rem; }
-  .cloud-1 { width: 110px; height: 55px; }
-  .cloud-2 { width: 90px; height: 45px; }
+  .cloud-1 { width: 120px; }
+  .cloud-2 { width: 100px; }
 
-  .h-timeline-items {
+  .milestone-track {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
 
-  .h-timeline-line {
-    display: none;
-  }
-
-  .h-card { max-width: 100%; }
+  .milestone-line { display: none; }
 
   .skills-grid { grid-template-columns: 1fr; }
   .cert-grid { grid-template-columns: 1fr; }
