@@ -1,9 +1,5 @@
 /* === Reset & Base === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: 'Inter', sans-serif;
@@ -18,143 +14,171 @@ body {
   padding: 0 20px;
 }
 
-/* === Hero Section (trimmed) === */
+/* === Hero (reduced height, with clouds) === */
 .hero {
   position: relative;
-  padding: 60px 20px;
+  padding: 50px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #0d9488 0%, #66bfbf 50%, #99dee8 100%);
   text-align: center;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  opacity: 0.7;
+  animation: float 6s ease-in-out infinite;
+}
+
+.cloud-1 { top: 10%; left: 8%; width: 160px; height: 80px; }
+.cloud-2 { top: 15%; right: 10%; width: 120px; height: 60px; animation-delay: 2s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: #ffffff;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
-.hero-content h1 .highlight {
-  color: #ffd700;
-}
+.hero-content h1 .highlight { color: #ffd700; }
 
 .hero-content h2 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
   color: #e0f7fa;
 }
 
-/* === Intro + Experience Split === */
-.intro-experience {
-  padding: 60px 20px;
+/* === About (centered intro) === */
+.about {
+  padding: 50px 20px;
   background: #ffffff;
 }
 
-.split-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: start;
-  max-width: 950px;
+.about-card {
+  text-align: center;
+  max-width: 650px;
   margin: 0 auto;
 }
 
-.intro-side {
-  text-align: center;
-}
-
-.intro-side .profile-photo {
-  width: 130px;
-  height: 130px;
+.profile-photo {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #66bfbf;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
-.intro-side h2 {
-  font-size: 1.5rem;
+.about-card h2 {
+  font-size: 1.4rem;
   color: #0d9488;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.intro-side p {
+.about-card p {
   font-size: 0.95rem;
   color: #4a5568;
   line-height: 1.7;
 }
 
-.experience-side h2 {
-  font-size: 1.5rem;
-  color: #0d9488;
-  margin-bottom: 20px;
+/* === Experience - Horizontal Timeline === */
+.experience {
+  padding: 50px 20px;
+  background: #f0f9f9;
 }
 
-.exp-list {
+.h-timeline {
   position: relative;
-  padding-left: 20px;
+  max-width: 850px;
+  margin: 0 auto;
+  padding-top: 30px;
 }
 
-.exp-list::before {
-  content: '';
+.h-timeline-line {
   position: absolute;
-  left: 6px;
-  top: 5px;
-  bottom: 5px;
-  width: 2px;
-  background: linear-gradient(to bottom, #0d9488, #66bfbf);
+  top: 48px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(to right, #0d9488, #66bfbf);
   border-radius: 2px;
 }
 
-.exp-entry {
+.h-timeline-items {
+  display: flex;
+  justify-content: space-between;
   position: relative;
-  margin-bottom: 24px;
-  padding-left: 14px;
 }
 
-.exp-dot {
-  position: absolute;
-  left: -20px;
-  top: 6px;
-  width: 12px;
-  height: 12px;
+.h-timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.h-dot {
+  width: 16px;
+  height: 16px;
   background: #0d9488;
   border-radius: 50%;
-  border: 2px solid #ffffff;
-  box-shadow: 0 0 0 2px #0d9488;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 3px #0d9488;
+  margin-bottom: 14px;
+  z-index: 1;
 }
 
-.exp-info h4 {
-  font-size: 0.95rem;
+.h-card {
+  text-align: center;
+  padding: 16px 12px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 220px;
+}
+
+.h-date {
+  font-size: 0.72rem;
+  color: #0d9488;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.h-card h4 {
+  font-size: 0.92rem;
   color: #2d3748;
   font-weight: 700;
   margin-bottom: 2px;
 }
 
-.exp-role {
-  display: block;
-  font-size: 0.85rem;
+.h-role {
+  font-size: 0.8rem;
   color: #4a5568;
   font-style: italic;
-}
-
-.exp-date {
-  display: block;
-  font-size: 0.8rem;
-  color: #0d9488;
-  font-weight: 600;
-  margin-top: 2px;
 }
 
 /* === Section Title === */
 .section-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #0d9488;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .section-title::after {
@@ -163,20 +187,20 @@ body {
   width: 50px;
   height: 3px;
   background: #66bfbf;
-  margin: 10px auto 0;
+  margin: 8px auto 0;
   border-radius: 2px;
 }
 
-/* === Skills Section === */
+/* === Skills === */
 .skills {
-  padding: 60px 20px;
-  background: #f0f9f9;
+  padding: 50px 20px;
+  background: #ffffff;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  gap: 14px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -184,42 +208,42 @@ body {
 .skill-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 20px;
-  background: #ffffff;
+  gap: 10px;
+  padding: 14px 18px;
+  background: #f7fffe;
   border-radius: 10px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .skill-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 .skill-item i {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #0d9488;
-  width: 28px;
+  width: 26px;
   text-align: center;
 }
 
 .skill-item span {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 500;
   color: #2d3748;
 }
 
-/* === Certifications Section === */
+/* === Certifications === */
 .certifications {
-  padding: 60px 20px;
-  background: #ffffff;
+  padding: 50px 20px;
+  background: #f0f9f9;
 }
 
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 18px;
+  gap: 16px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -228,47 +252,45 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 20px;
-  background: #f7fffe;
+  padding: 18px;
+  background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
   transition: transform 0.2s;
 }
 
-.cert-item:hover {
-  transform: translateY(-2px);
-}
+.cert-item:hover { transform: translateY(-2px); }
 
 .cert-item i {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #0d9488;
-  width: 36px;
+  width: 34px;
   text-align: center;
   flex-shrink: 0;
 }
 
 .cert-text h4 {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: #2d3748;
   font-weight: 600;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .cert-text span {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: #718096;
 }
 
-/* === Achievements Section === */
+/* === Achievements === */
 .achievements {
-  padding: 60px 20px;
-  background: #f0f9f9;
+  padding: 50px 20px;
+  background: #ffffff;
 }
 
 .achievements-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 18px;
+  gap: 16px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -277,40 +299,38 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  padding: 20px;
-  background: #ffffff;
+  padding: 18px;
+  background: #f7fffe;
   border-radius: 10px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
   transition: transform 0.2s;
 }
 
-.achievement-item:hover {
-  transform: translateY(-2px);
-}
+.achievement-item:hover { transform: translateY(-2px); }
 
 .achievement-item i {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #f59e0b;
   flex-shrink: 0;
   margin-top: 2px;
 }
 
 .achievement-item p {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: #4a5568;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-/* === Hobbies Section === */
+/* === Hobbies === */
 .hobbies {
-  padding: 60px 20px;
-  background: #ffffff;
+  padding: 50px 20px;
+  background: #f0f9f9;
 }
 
 .hobbies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -320,47 +340,34 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 22px 15px;
-  background: #f7fffe;
+  padding: 20px 10px;
+  background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
   transition: transform 0.2s;
 }
 
-.hobby-item:hover {
-  transform: translateY(-2px);
-}
-
-.hobby-item i {
-  font-size: 1.6rem;
-  color: #66bfbf;
-}
-
-.hobby-item span {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #4a5568;
-}
+.hobby-item:hover { transform: translateY(-2px); }
+.hobby-item i { font-size: 1.5rem; color: #66bfbf; }
+.hobby-item span { font-size: 0.8rem; font-weight: 500; color: #4a5568; text-align: center; }
 
 /* === Footer === */
 .footer {
   background: linear-gradient(135deg, #0d9488, #066d65);
-  padding: 45px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
-.download-section {
-  margin-bottom: 25px;
-}
+.download-section { margin-bottom: 22px; }
 
 .resume-btn {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 12px 30px;
   background: rgba(255,255,255,0.15);
   color: #ffffff;
   text-decoration: none;
   border-radius: 30px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   border: 2px solid rgba(255,255,255,0.5);
   transition: background 0.3s, transform 0.2s;
@@ -371,47 +378,43 @@ body {
   transform: translateY(-2px);
 }
 
-.resume-btn i {
-  margin-right: 8px;
-}
+.resume-btn i { margin-right: 8px; }
 
 .footer-links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 25px;
-  margin-bottom: 25px;
+  gap: 22px;
+  margin-bottom: 20px;
 }
 
 .footer-links a {
   color: #e0f7fa;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 500;
   transition: color 0.2s;
 }
 
-.footer-links a:hover {
-  color: #ffffff;
-}
+.footer-links a:hover { color: #ffffff; }
 
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 14px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
 .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: rgba(255,255,255,0.15);
   color: #ffffff;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-decoration: none;
   transition: background 0.2s, transform 0.2s;
 }
@@ -423,56 +426,37 @@ body {
 
 .copyright {
   color: rgba(255,255,255,0.6);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
 }
 
-/* === Mobile Responsive === */
+/* === Mobile === */
 @media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
+  .hero-content h1 { font-size: 2.2rem; }
+  .hero-content h2 { font-size: 1rem; }
+  .cloud-1 { width: 110px; height: 55px; }
+  .cloud-2 { width: 90px; height: 45px; }
 
-  .hero-content h2 {
-    font-size: 1rem;
-  }
-
-  .split-layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cert-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .achievements-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hobbies-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer-links {
+  .h-timeline-items {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
   }
+
+  .h-timeline-line {
+    display: none;
+  }
+
+  .h-card { max-width: 100%; }
+
+  .skills-grid { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr; }
+  .achievements-grid { grid-template-columns: 1fr; }
+  .hobbies-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-links { flex-direction: column; gap: 10px; }
 }
 
 @media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .hobbies-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    font-size: 1.6rem;
-  }
+  .hero-content h1 { font-size: 1.8rem; }
+  .hobbies-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 1.5rem; }
 }

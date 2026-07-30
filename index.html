@@ -11,63 +11,73 @@
 </head>
 <body>
 
-  <!-- Hero Section (trimmed) -->
+  <!-- Hero Section (small with clouds) -->
   <section class="hero">
+    <svg class="cloud cloud-1" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="70" cy="60" rx="50" ry="30" fill="rgba(255,255,255,0.5)"/>
+      <ellipse cx="110" cy="55" rx="40" ry="25" fill="rgba(255,255,255,0.5)"/>
+      <ellipse cx="90" cy="50" rx="45" ry="28" fill="rgba(255,255,255,0.6)"/>
+    </svg>
+    <svg class="cloud cloud-2" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="70" cy="60" rx="50" ry="30" fill="rgba(255,255,255,0.4)"/>
+      <ellipse cx="110" cy="55" rx="40" ry="25" fill="rgba(255,255,255,0.4)"/>
+      <ellipse cx="90" cy="50" rx="45" ry="28" fill="rgba(255,255,255,0.5)"/>
+    </svg>
     <div class="hero-content">
       <h1>Hey!, I'm <span class="highlight">Manoj</span></h1>
       <h2>SRE / DevOps Engineer</h2>
     </div>
   </section>
 
-  <!-- Intro + Experience Side by Side -->
-  <section class="intro-experience" id="about">
+  <!-- Intro Section (centered) -->
+  <section class="about">
     <div class="container">
-      <div class="split-layout">
+      <div class="about-card">
+        <img class="profile-photo" src="myphoto.jpg" alt="Manoj Sai Katakam">
+        <h2>Hi There</h2>
+        <p>I'm <strong>Manoj Sai Katakam</strong>, a <strong>Senior Site Reliability Engineer</strong> with 7+ years of experience in Cloud, DevOps, and Site Reliability Engineering.</p>
+      </div>
+    </div>
+  </section>
 
-        <!-- Left: Intro -->
-        <div class="intro-side">
-          <img class="profile-photo" src="myphoto.jpg" alt="Manoj Sai Katakam">
-          <h2>Hi There</h2>
-          <p>I'm <strong>Manoj Sai Katakam</strong>, a <strong>Senior Site Reliability Engineer</strong> with 7+ years of experience in Cloud, DevOps, and Site Reliability Engineering.</p>
-        </div>
-
-        <!-- Right: Experience (compact) -->
-        <div class="experience-side">
-          <h2>Experience</h2>
-          <div class="exp-list">
-            <div class="exp-entry">
-              <div class="exp-dot"></div>
-              <div class="exp-info">
-                <h4>SS&C EZE Software India Pvt Ltd</h4>
-                <span class="exp-role">Senior Site Reliability Engineer</span>
-                <span class="exp-date">2024 Mar - Present</span>
-              </div>
+  <!-- Experience - Horizontal Timeline -->
+  <section class="experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="h-timeline">
+        <div class="h-timeline-line"></div>
+        <div class="h-timeline-items">
+          <div class="h-timeline-item">
+            <div class="h-dot"></div>
+            <div class="h-card">
+              <span class="h-date">2019 Jan - 2022 Apr</span>
+              <h4>TCS</h4>
+              <span class="h-role">Systems Engineer</span>
             </div>
-            <div class="exp-entry">
-              <div class="exp-dot"></div>
-              <div class="exp-info">
-                <h4>Techolution India Pvt Ltd</h4>
-                <span class="exp-role">DevOps Engineer</span>
-                <span class="exp-date">2022 Apr - 2024 Mar</span>
-              </div>
+          </div>
+          <div class="h-timeline-item">
+            <div class="h-dot"></div>
+            <div class="h-card">
+              <span class="h-date">2022 Apr - 2024 Mar</span>
+              <h4>Techolution</h4>
+              <span class="h-role">DevOps Engineer</span>
             </div>
-            <div class="exp-entry">
-              <div class="exp-dot"></div>
-              <div class="exp-info">
-                <h4>Tata Consultancy Services</h4>
-                <span class="exp-role">Systems Engineer</span>
-                <span class="exp-date">2019 Jan - 2022 Apr</span>
-              </div>
+          </div>
+          <div class="h-timeline-item">
+            <div class="h-dot"></div>
+            <div class="h-card">
+              <span class="h-date">2024 Mar - Present</span>
+              <h4>SS&C EZE</h4>
+              <span class="h-role">Sr. Site Reliability Engineer</span>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section class="skills" id="skills">
+  <section class="skills">
     <div class="container">
       <h2 class="section-title">Skills</h2>
       <div class="skills-grid">
@@ -88,7 +98,7 @@
   </section>
 
   <!-- Certifications Section -->
-  <section class="certifications" id="certifications">
+  <section class="certifications">
     <div class="container">
       <h2 class="section-title">Certifications</h2>
       <div class="cert-grid">
@@ -118,7 +128,7 @@
   </section>
 
   <!-- Recognitions Section -->
-  <section class="achievements" id="achievements">
+  <section class="achievements">
     <div class="container">
       <h2 class="section-title">Recognitions</h2>
       <div class="achievements-grid">
@@ -139,7 +149,7 @@
   </section>
 
   <!-- Hobbies Section -->
-  <section class="hobbies" id="hobbies">
+  <section class="hobbies">
     <div class="container">
       <h2 class="section-title">Hobbies</h2>
       <div class="hobbies-grid">
@@ -152,13 +162,12 @@
     </div>
   </section>
 
-  <!-- Footer with Download Resume -->
+  <!-- Footer with Download -->
   <footer class="footer">
     <div class="download-section">
       <a href="Manojsai-Katakam-SRE.pdf" class="resume-btn" download><i class="fas fa-download"></i> Download Resume</a>
     </div>
     <div class="footer-links">
-      <a href="https://simpleclc.azurewebsites.net/">Simple Calculator</a>
       <a href="contact.html">Contact Details</a>
       <a href="send.html">Get in Touch</a>
     </div>
