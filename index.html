@@ -1,87 +1,102 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Fondamento&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <meta charset="utf-8" name="viewport">
-    <title>Manoj Resume Site</title>
-  </head>
-  <link rel="stylesheet" href="styles.css">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manoj Sai Katakam | SRE/DevOps Engineer</title>
   <link rel="icon" href="myfav.bmp">
-  <body>
-     <div class="image">
-      <img class="img1" src="https://clipartion.com/wp-content/uploads/2015/10/cloud-clip-art-outline.png" alt="myimage">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <svg class="cloud cloud-1" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="70" cy="60" rx="50" ry="30" fill="rgba(255,255,255,0.3)"/>
+        <ellipse cx="110" cy="55" rx="40" ry="25" fill="rgba(255,255,255,0.3)"/>
+        <ellipse cx="90" cy="50" rx="45" ry="28" fill="rgba(255,255,255,0.4)"/>
+      </svg>
+      <svg class="cloud cloud-2" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="70" cy="60" rx="50" ry="30" fill="rgba(255,255,255,0.2)"/>
+        <ellipse cx="110" cy="55" rx="40" ry="25" fill="rgba(255,255,255,0.2)"/>
+        <ellipse cx="90" cy="50" rx="45" ry="28" fill="rgba(255,255,255,0.3)"/>
+      </svg>
     </div>
-    <div class="name">
-      <h1>Hey!,I'm Manoj</h1>
-      <h2>SRE/DevOps Engineer</h2>
+    <div class="hero-content">
+      <h1>Hey!, I'm <span class="highlight">Manoj</span></h1>
+      <h2>SRE / DevOps Engineer</h2>
+      <p class="tagline">Building reliable infrastructure at scale</p>
     </div>
-    <div class="image">
-     <img class="img2" src="https://clipartion.com/wp-content/uploads/2015/10/cloud-clip-art-outline.png" alt="myimage">
-   </div>
-   <div class="image" id="nagai">
-     <img class="img3" src="https://clipartion.com/wp-content/uploads/2016/03/mountain-clipart-mountain-peak-logo-at-vector.png" alt="">
-   </div>
+  </section>
 
-   <div class="intro">
-     <img class="myimage" src="myphoto.jpg" alt="manojsaik">
-     <h2>Hi There</h2>
-     <p>I'm <b>Manoj Sai Katakam</b> <b><i>Senior Site Reliablity Engineer </i></b> with 7+ years of experience in Cloud, DevOps and Site Reliablity Engineering. </p>
-     <br>
-     <br>
-   </div>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-card">
+        <img class="profile-photo" src="myphoto.jpg" alt="Manoj Sai Katakam">
+        <div class="about-text">
+          <h2>Hi There</h2>
+          <p>I'm <strong>Manoj Sai Katakam</strong>, a <strong>Senior Site Reliability Engineer</strong> with 7+ years of experience in Cloud, DevOps, and Site Reliability Engineering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-     <hr>
-     <div class="skills">
-       <h2>Skills</h2>
-       <table class="tb">
-         <tr>
-           <td> <img class="myimage" src="skills.jpg"alt=""> </td>
-           <td> <ol style="text-align:left">
-              <li><i>DevOps	</i></li>
-              <li><i>Kubernetes,Docker</i></li>
-              <li><i>Linux/ Shell Scripting</i></li>
-              <li><i>Python</i></li>
-              <li><i>Terraform</i></li>
-              <li><i>Ansible,Chef</i></li>
-              <li><i>GitOps - ArgoCD</i></li>
-              <li><i>Hashicorp Vault, Packer</i></li>
-            </ol></td>
-         </tr>
-       </table>
-     </div>
-       <hr>
-       <div class="skills">
-         <h2>Hobbies</h2>
-           <table class="tb">
-             <tr>
-<td> <img class="myimage" src="hobbies.jpg"alt=""></td>
-               <td>   <ul style="text-align:left">
-                    <li><i>Travelling</i></li>
-                    <li><i>Internet surfing</i></li>
-                    <li><i>Cooking</i></li>
-                    <li><i>Reading books</i></li>
-                    <li><i>Binge Watch</i></li>
-                  </ul></td>
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item"><i class="fas fa-cloud"></i><span>Cloud (AWS/Azure)</span></div>
+        <div class="skill-item"><i class="fas fa-dharmachakra"></i><span>Kubernetes</span></div>
+        <div class="skill-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+        <div class="skill-item"><i class="fas fa-terminal"></i><span>Linux / Shell Scripting</span></div>
+        <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="skill-item"><i class="fas fa-cubes"></i><span>Terraform</span></div>
+        <div class="skill-item"><i class="fas fa-cogs"></i><span>Ansible / Chef</span></div>
+        <div class="skill-item"><i class="fas fa-code-branch"></i><span>GitOps - ArgoCD</span></div>
+        <div class="skill-item"><i class="fas fa-lock"></i><span>Hashicorp Vault</span></div>
+        <div class="skill-item"><i class="fas fa-box"></i><span>Packer</span></div>
+        <div class="skill-item"><i class="fas fa-chart-line"></i><span>Monitoring (Prometheus/Grafana)</span></div>
+        <div class="skill-item"><i class="fab fa-jenkins"></i><span>CI/CD (Jenkins/GitHub Actions)</span></div>
+      </div>
+    </div>
+  </section>
 
-             </tr>
-           </table>
-       </div>
+  <!-- Hobbies Section -->
+  <section class="hobbies" id="hobbies">
+    <div class="container">
+      <h2 class="section-title">Hobbies</h2>
+      <div class="hobbies-grid">
+        <div class="hobby-item"><i class="fas fa-plane-departure"></i><span>Travelling</span></div>
+        <div class="hobby-item"><i class="fas fa-globe"></i><span>Internet Surfing</span></div>
+        <div class="hobby-item"><i class="fas fa-utensils"></i><span>Cooking</span></div>
+        <div class="hobby-item"><i class="fas fa-book-open"></i><span>Reading Books</span></div>
+        <div class="hobby-item"><i class="fas fa-tv"></i><span>Binge Watch</span></div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://simpleclc.azurewebsites.net/">Simple Calculator</a>
+      <a href="contact.html">Contact Details</a>
+      <a href="send.html">Get in Touch</a>
+    </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/manojsaik" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/infrawithmanoj/" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/manojsai_k/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/mnjk99" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://manojkatakam.blogspot.com" aria-label="Blog"><i class="fas fa-blog"></i></a>
+      <a href="https://www.facebook.com/mnjk99/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p class="copyright">&copy; 2026 Manoj Sai Katakam. All rights reserved.</p>
+  </footer>
 
-   <br>
-   <hr><div class="foot" style="background-color:#66BFBF">
-    <h5 style="color:#11999E"><a href="https://simpleclc.azurewebsites.net/">Simple Calculator</a></h5>
-     <h5 style="color:#11999E"><a href="contact.html">Contact details</a></h5>
-     <h5 style="color:#11999E"><a href="send.html">Give me your contact details</a></h5>
-     <h5><a href="https://www.facebook.com/mnjk99/" class="fa fa-facebook" ></a> &nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/manojsaik" class="fa fa-linkedin"></a>
-     &nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/manojsai_k/" class="fa fa-instagram"></a>&nbsp;&nbsp;&nbsp; <a href="https://twitter.com/mnjk99" class="fa fa-twitter"></a>
-&nbsp;&nbsp;&nbsp;<a href="https://manojkatakam.blogspot.com" class="fa-solid fa-blog">B</a> &nbsp;&nbsp;&nbsp;<a href="https://github.com/infrawithmanoj/" class="fa fa-github"></a></h5>
-
-     <br>
-     <p style="color:#EAF6F6">&copy;manojsaik</p>
-   </div>
-
-  </body>
+</body>
 </html>
